@@ -5,10 +5,19 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.*;
 
 
-public class Star implements ChristmasTree{
+public class Star extends TreeDecorator{
 
+    public Star(ChristmasTree tree) {
+        super(tree);
+    }
     @Override
     public void draw(Pane pane) {
+        super.draw(pane);
+        starDraw(pane);
+    }
+
+
+    public void starDraw(Pane pane) {
         Polygon star = new Polygon();
         star.getPoints().addAll(new Double[]{
                 100.0, 10.0,

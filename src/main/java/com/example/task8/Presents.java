@@ -4,9 +4,21 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Polygon;
 
-public class Presents implements ChristmasTree{
+public class Presents extends TreeDecorator{
+
+    public Presents(ChristmasTree tree) {
+        super(tree);
+    }
+
     @Override
     public void draw(Pane pane) {
+        super.draw(pane);
+        drawPresents(pane);
+
+    }
+
+
+    public void drawPresents(Pane pane) {
         Polygon pres1 = new Polygon();
         pres1.getPoints().addAll(new Double[]{
                 0.0, 250.0,

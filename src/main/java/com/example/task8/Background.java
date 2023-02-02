@@ -4,7 +4,11 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Polygon;
 
-public class Background implements ChristmasTree{
+public class Background extends TreeDecorator{
+    public Background(ChristmasTree tree) {
+        super(tree);
+    }
+
     @Override
     public void draw(Pane pane) {
         Polygon back = new Polygon();

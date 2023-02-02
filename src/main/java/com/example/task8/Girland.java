@@ -4,7 +4,11 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
-public class Girland implements ChristmasTree{
+public class Girland extends TreeDecorator{
+
+    public Girland(ChristmasTree tree) {
+        super(tree);
+    }
 
     @Override
     public void draw(Pane pane) {
